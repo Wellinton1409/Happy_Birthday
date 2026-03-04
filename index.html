@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños Mi Amor</title>
+    <style>
+        /* Importamos tipografías elegantes de Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+        :root {
+            /* --bg-color: #2c2121;
+            --bg-color: #2c2121;
+            /* Fondo oscuro elegante tipo Canva 
+            --text-color: #fdf3e7;
+            /* Blanco crema 
+            --accent-color: #d1bfae; */
+            /*--bg-color: #2c2121;*/
+            --bg-color: #F9EAE1;
+            /* Fondo oscuro elegante tipo Canva */
+            --text-color: #4A2E2B;
+            /* Blanco crema */
+            --accent-color: #825C54;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            /* Para que al presionar botones baje suavemente */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* Cada sección ocupará al menos el tamaño de la pantalla del celular */
+        section {
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1,
+        h2,
+        .script-font {
+            font-family: 'Dancing Script', cursive;
+            font-weight: 700;
+        }
+
+        /* --- 1. PORTADA --- */
+        .title {
+            font-size: 4.5rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .cake-img {
+            width: 200px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
+        }
+
+        .buttons-container {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: transparent;
+            color: var(--text-color);
+            border: 2px solid var(--accent-color);
+            padding: 10px 25px;
+            border-radius: 20px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:active {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+        }
+
+        /* --- 2. CORAZONES --- */
+        .hearts-container {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        /* --- 2. CORAZONES --- */
+        #corazones {
+            background-image: url('/fondoRosas.png');
+            /* Tu imagen de fondo aquí */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
+
+        .heart {
+            font-size: 3rem;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .heart:active {
+            transform: scale(1.2);
+        }
+
+        /* --- 3. FOTOS --- */
+        #fotos {
+            background-image: url('/fondoFlores2.png');
+            /* Reemplaza con el nombre de tu imagen */
+            background-size: cover;
+            /* Ajusta la imagen para cubrir toda la sección */
+            background-position: center;
+            /* Centra la imagen en la sección */
+        }
+
+        .photos-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .photo-frame {
+            width: 100%;
+            aspect-ratio: 1;
+            /* Fotos cuadradas perfectas */
+            background-color: var(--bg-color);
+            padding: 5px;
+            /* Borde simulando el encaje (doily) de la imagen 3 */
+            border: 6px dashed #4A2E2B;
+            border-radius: 10px;
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        /* --- 4. VIDEO --- */
+        .video-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            background-color: var(--bg-color);
+            border: 6px dotted #4A2E2B;
+            /* Borde estilo encaje */
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* Proporción 16:9 de YouTube */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* --- 5. CUPONES --- */
+        #cupones {
+            /* Ruta de tu imagen de fondo creada */
+            background-image: url('/fondoFlores2.png');
+
+            /* Ajustes para la imagen de fondo */
+            background-size: cover;
+            /* Cubre toda la sección sin deformarse */
+            background-position: center;
+            /* Centra la imagen */
+            background-repeat: no-repeat;
+            /* Evita que la imagen se repita */
+
+            /* Opcional: Asegúrate de que el padding sea suficiente para que el contenido no tape elementos clave del fondo */
+            padding: 60px 20px;
+
+            /* Opcional: Si el fondo es oscuro, asegúrate de que el texto sea claro para que sea legible */
+            color: #fdf3e7;
+        }
+
+        .coupons-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .coupon {
+            background-color: #fdf3e7;
+            color: #2c2121;
+            padding: 25px 10px;
+            border: 2px dashed #8b7365;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        /* --- 6. CARTA --- */
+        /* .letter-section {
+            /* Fondo simulando el mantel a cuadros rojo 
+            background-image: repeating-linear-gradient(45deg, #a32a2a 25%, transparent 25%, transparent 75%, #a32a2a 75%, #a32a2a), repeating-linear-gradient(45deg, #a32a2a 25%, #fff 25%, #fff 75%, #a32a2a 75%, #a32a2a);
+            background-position: 0 0, 10px 10px;
+            background-size: 20px 20px;
+        } */
+
+        .letter-section {
+            /* Tu nueva imagen de fondo */
+            background-image: url('/hojaFondo.jpg');
+            background-size: cover;
+            /* Hace que la imagen cubra todo el espacio sin deformarse */
+            background-position: center;
+            /* Centra la imagen perfectamente */
+            background-repeat: no-repeat;
+            /* Evita que la imagen se repita como un mosaico */
+        }
+
+        .envelope {
+            background-color: #fdf6e3;
+            /* Color papel viejo/crema */
+            color: #333;
+            padding: 30px 20px;
+            width: 95%;
+            max-width: 400px;
+            border-radius: 5px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            text-align: left;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            border: 1px solid #e0d5c1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <audio id="bg-music" src="agua.mp3" loop></audio>
+
+    <section id="portada">
+        <img src="/bear.png" alt="Pastel de Cumpleaños" class="cake-img">
+        <h1 class="title">Feliz<br>Cumpleaños<br><span style="font-size: 2rem;">Corazón</span></h1>
+        <p style="margin-top: 10px; font-style: italic;">Antes de comenzar... ¿unos besos o qué?</p>
+
+        <div class="buttons-container">
+            <button id="play-btn">🎵 Música</button>
+            <button onclick="document.getElementById('corazones').scrollIntoView();">Presióname</button>
+        </div>
+    </section>
+
+    <section id="corazones">
+        <h2 style="font-size: 3.5rem;">Especial para ti</h2>
+        <p style="margin-top: 10px;">(Toca los corazones)</p>
+        <br>
+        <p>corazoncito mío</p>
+        <div class="hearts-container">
+            <div class="heart"
+                onclick="alert('Físicamente en el trabajo, pero mentalmente en el último beso que nos dimos y lo lindo que me mirabas <3')">
+                🤍</div>
+            <div class="heart" onclick="alert('Eres como un chocolate... te me antojas a cada rato <3')">🤍</div>
+            <div class="heart"
+                onclick="alert('Para que mirar el cielo y las estrellas ??? si con tan solo mirar tus ojitos veo cada una de ellas <3')">
+                🤍</div>
+            <div class="heart"
+                onclick="alert('Si me pusiera a escribir poemas sobre ti toda la noche, dudo mucho que alguna vez volviera a amanecer <3')">
+                🤍</div>
+        </div>
+    </section>
+
+    <section id="fotos">
+        <h2 style="font-size: 3rem;">Feliz Cumpleaños</h2>
+        <div class="photos-grid">
+            <div class="photo-frame"><img src="foto1.jpeg" alt="Foto 1"></div>
+            <div class="photo-frame"><img src="foto2.jpeg" alt="Foto 2"></div>
+            <div class="photo-frame"><img src="foto3.jpeg" alt="Foto 3"></div>
+            <div class="photo-frame"><img src="foto4.jpeg" alt="Foto 4"></div>
+            <div class="photo-frame"><img src="foto5.jpeg" alt="Foto 5"></div>
+            <div class="photo-frame"><img src="foto6.jpeg" alt="Foto 6"></div>
+        </div>
+    </section>
+
+    <section id="cupones">
+        <h2 style="font-size: 3rem; margin-bottom: 20px; color: #2c2121;">Cupones</h2>
+        <div class="coupons-grid">
+            <div class="coupon">NOCHE DE PELÍCULAS</div>
+            <div class="coupon">MARATÓN DE JUEGOS</div>
+            <div class="coupon">REGALO GRATIS</div>
+            <div class="coupon">DÍA DE "SÍ" A TODO</div>
+        </div>
+    </section>
+
+    <section id="carta" class="letter-section">
+        <div class="envelope">
+            <h2 style="text-align: center; margin-bottom: 20px; font-size: 2.5rem; color: #2c2121;">Mi niña hermosa,
+            </h2>
+            <p style="color: #2c2121;">
+                Feliz cumpleaños, mi amor. Hoy quiero tomarme un momento para decirte lo increíblemente especial que
+                eres para mí.
+                Cada día a tu lado es una aventura que atesoro. Amo tu sonrisa, la forma en que iluminas cualquier lugar
+                al que llegas, y ese corazón tan noble que tienes.
+            </p>
+            <br>
+            <p style="color: #2c2121;">
+                (Aquí puedes continuar escribiendo hasta llegar a tus 300 palabras. El recuadro crecerá automáticamente
+                hacia abajo. Dile lo mucho que la amas, recuerda alguna anécdota especial y deséale lo mejor en su
+                día...)
+            </p>
+            <br>
+            <p
+                style="text-align: right; font-family: 'Dancing Script', cursive; font-size: 2rem; color: #2c2121; margin-top: 10px;">
+                Te amo infinito.
+            </p>
+        </div>
+    </section>
+
+    <section id="video">
+        <h2 style="font-size: 3rem;">Esta canción es para ti</h2>
+        <div class="video-container">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/bLojUhnV_RQ" title="YouTube video" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const audio = document.getElementById('bg-music');
+        const playBtn = document.getElementById('play-btn');
+        let isPlaying = false;
+
+        playBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                audio.pause();
+                playBtn.innerText = '🎵 Música';
+            } else {
+                audio.play();
+                playBtn.innerText = '⏸️ Pausar';
+            }
+            isPlaying = !isPlaying;
+        });
+    </script>
+</body>
+
+</html>
